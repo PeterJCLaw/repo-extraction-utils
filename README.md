@@ -1,5 +1,6 @@
 Steps for extracting files from one git repo into another:
 
+0. Grab a copy of the utils files from this gist (and ensure they're marked as executable)
 1. Clone the original repo to a new location: `git clone $ORIGINAL /tmp/new-repo && cd /tmp/new-repo`
 2. Break the connection from the original repo: `git remote remove origin`
 3. Create a branch of the starting point for easy reference
