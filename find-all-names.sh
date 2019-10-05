@@ -7,7 +7,8 @@ DIRECTORY="$1"
 
 if [ -z "$DIRECTORY" ]
 then
-  exit "Usage: $(basename $0) DIRECTORY"
+  echo "Usage: $(basename $0) DIRECTORY"
+  exit 1
 fi
 
 find $DIRECTORY -type f | xargs -l git log --format='' --name-only  --find-copies-harder -M50% -C50%  --follow | sort -u
